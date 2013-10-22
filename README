@@ -1,0 +1,45 @@
+NAME
+    Pod::Weaver::Section::Homepage::DefaultCPAN - Add a HOMEPAGE section
+
+SYNOPSIS
+    In your "weaver.ini":
+
+     [Homepage::DefaultCPAN]
+
+    To specify a bugtracker other than "https://metacpan.org/release/NAME",
+    in dist.ini:
+
+     [MetaResources]
+     homepage=http://example.com/
+
+DESCRIPTION
+    This section plugin adds a HOMEPAGE section.
+
+SOURCE
+    The development version is on github at
+    <http://github.com/sharyanto/perl-Pod-Weaver-Section-Homepage-DefaultCPA
+    N> and may be cloned from
+    <git://github.com/sharyanto/perl-Pod-Weaver-Section-Homepage-DefaultCPAN
+    .git>
+
+HOMEPAGE
+    Project homepage is at
+    https://metacpan.org/release/Pod-Weaver-Section-Homepage-DefaultCPAN.
+
+BUGS
+    Please report any bugs or feature requests on the bugtracker website
+    http://rt.cpan.org/Public/Dist/Display.html?Name=Pod-Weaver-Section-Home
+    pag e-DefaultCPAN
+
+    When submitting a bug or request, please include a test-file or a patch
+    to an existing test-file that illustrates the bug or desired feature.
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
