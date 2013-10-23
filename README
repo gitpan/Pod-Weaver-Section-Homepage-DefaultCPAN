@@ -1,30 +1,33 @@
 NAME
     Pod::Weaver::Section::Homepage::DefaultCPAN - Add a HOMEPAGE section
+    (homepage defaults to MetaCPAN release page)
 
 SYNOPSIS
     In your "weaver.ini":
 
      [Homepage::DefaultCPAN]
 
-    To specify a bugtracker other than "https://metacpan.org/release/NAME",
-    in dist.ini:
+    To specify homepage other than "https://metacpan.org/release/NAME", in
+    dist.ini:
 
      [MetaResources]
      homepage=http://example.com/
 
 DESCRIPTION
-    This section plugin adds a HOMEPAGE section.
+    This section plugin adds a HOMEPAGE section using "homepage" metadata,
+    or MetaCPAN release page if "homepage" is not specified.
 
-SOURCE
-    The development version is on github at
-    <http://github.com/sharyanto/perl-Pod-Weaver-Section-Homepage-DefaultCPA
-    N> and may be cloned from
-    <git://github.com/sharyanto/perl-Pod-Weaver-Section-Homepage-DefaultCPAN
-    .git>
+SEE ALSO
+    Pod::Weaver::Section::Availability
 
 HOMEPAGE
-    Project homepage is at
-    https://metacpan.org/release/Pod-Weaver-Section-Homepage-DefaultCPAN.
+    Please visit the project's homepage at
+    <https://metacpan.org/release/Pod-Weaver-Section-Homepage-DefaultCPAN>.
+
+SOURCE
+    Source repository is at
+    <https://github.com/sharyanto/perl-Pod-Weaver-Section-Homepage-DefaultCP
+    AN>.
 
 BUGS
     Please report any bugs or feature requests on the bugtracker website

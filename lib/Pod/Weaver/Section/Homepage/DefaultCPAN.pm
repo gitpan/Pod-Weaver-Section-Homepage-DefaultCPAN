@@ -2,14 +2,14 @@ package Pod::Weaver::Section::Homepage::DefaultCPAN;
 
 use 5.010001;
 use Moose;
-use Text::Wrap ();
+#use Text::Wrap ();
 with 'Pod::Weaver::Role::Section';
 
 #use Log::Any '$log';
 
 use Moose::Autobox;
 
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 sub weave_section {
   my ($self, $document, $input) = @_;
@@ -20,7 +20,7 @@ sub weave_section {
 
   my $text = "Please visit the project's homepage at L<$homepage>.";
 
-  $text = Text::Wrap::wrap(q{}, q{}, $text);
+  #$text = Text::Wrap::wrap(q{}, q{}, $text);
 
   $document->children->push(
     Pod::Elemental::Element::Nested->new({
@@ -35,7 +35,7 @@ sub weave_section {
 
 no Moose;
 1;
-# ABSTRACT: Add a HOMEPAGE section
+# ABSTRACT: Add a HOMEPAGE section (homepage defaults to MetaCPAN release page)
 
 __END__
 
@@ -45,7 +45,7 @@ __END__
 
 =head1 NAME
 
-Pod::Weaver::Section::Homepage::DefaultCPAN - Add a HOMEPAGE section
+Pod::Weaver::Section::Homepage::DefaultCPAN - Add a HOMEPAGE section (homepage defaults to MetaCPAN release page)
 
 =head1 SYNOPSIS
 
@@ -53,7 +53,7 @@ In your C<weaver.ini>:
 
  [Homepage::DefaultCPAN]
 
-To specify a bugtracker other than C<https://metacpan.org/release/NAME>, in
+To specify homepage other than C<https://metacpan.org/release/NAME>, in
 dist.ini:
 
  [MetaResources]
@@ -61,19 +61,23 @@ dist.ini:
 
 =head1 DESCRIPTION
 
-This section plugin adds a HOMEPAGE section.
-
-=head1 SOURCE
-
-The development version is on github at L<http://github.com/sharyanto/perl-Pod-Weaver-Section-Homepage-DefaultCPAN>
-and may be cloned from L<git://github.com/sharyanto/perl-Pod-Weaver-Section-Homepage-DefaultCPAN.git>
+This section plugin adds a HOMEPAGE section using C<homepage> metadata, or
+MetaCPAN release page if C<homepage> is not specified.
 
 =for Pod::Coverage weave_section
 
+=head1 SEE ALSO
+
+L<Pod::Weaver::Section::Availability>
+
 =head1 HOMEPAGE
 
-Project homepage is at
-https://metacpan.org/release/Pod-Weaver-Section-Homepage-DefaultCPAN.
+Please visit the project's homepage at
+L<https://metacpan.org/release/Pod-Weaver-Section-Homepage-DefaultCPAN>.
+
+=head1 SOURCE
+
+Source repository is at L<https://github.com/sharyanto/perl-Pod-Weaver-Section-Homepage-DefaultCPAN>.
 
 =head1 BUGS
 

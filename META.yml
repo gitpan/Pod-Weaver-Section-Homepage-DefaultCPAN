@@ -1,5 +1,5 @@
 ---
-abstract: 'Add a HOMEPAGE section'
+abstract: 'Add a HOMEPAGE section (homepage defaults to MetaCPAN release page)'
 author:
   - 'Steven Haryanto <stevenharyanto@gmail.com>'
 build_requires:
@@ -21,6 +21,5 @@ requires:
   Moose::Autobox: 0
   Pod::Weaver::Role::Section: 0
   perl: 5.010001
-resources:
-  repository: http://github.com/sharyanto/perl-Pod-Weaver-Section-Homepage-DefaultCPAN
-version: 0.01
+resources: {}
+version: 0.02
