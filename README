@@ -2,6 +2,11 @@ NAME
     Pod::Weaver::Section::Homepage::DefaultCPAN - Add a HOMEPAGE section
     (homepage defaults to MetaCPAN release page)
 
+VERSION
+    This document describes version 0.03 of
+    Pod::Weaver::Section::Homepage::DefaultCPAN (from Perl distribution
+    Pod-Weaver-Section-Homepage-DefaultCPAN), released on 2015-01-07.
+
 SYNOPSIS
     In your "weaver.ini":
 
@@ -17,6 +22,12 @@ DESCRIPTION
     This section plugin adds a HOMEPAGE section using "homepage" metadata,
     or MetaCPAN release page if "homepage" is not specified.
 
+ATTRIBUTES
+  text
+    The text that is added. %s is replaced by the homepage url.
+
+    Default: "Please visit the project's homepage at L<%s>."
+
 SEE ALSO
     Pod::Weaver::Section::Availability
 
@@ -26,22 +37,22 @@ HOMEPAGE
 
 SOURCE
     Source repository is at
-    <https://github.com/sharyanto/perl-Pod-Weaver-Section-Homepage-DefaultCP
+    <https://github.com/perlancar/perl-Pod-Weaver-Section-Homepage-DefaultCP
     AN>.
 
 BUGS
     Please report any bugs or feature requests on the bugtracker website
-    http://rt.cpan.org/Public/Dist/Display.html?Name=Pod-Weaver-Section-Home
-    pag e-DefaultCPAN
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=Pod-Weaver-Section-Ho
+    mepage-DefaultCPAN>
 
     When submitting a bug or request, please include a test-file or a patch
     to an existing test-file that illustrates the bug or desired feature.
 
 AUTHOR
-    Steven Haryanto <stevenharyanto@gmail.com>
+    perlancar <perlancar@cpan.org>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2013 by Steven Haryanto.
+    This software is copyright (c) 2015 by perlancar@cpan.org.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.
